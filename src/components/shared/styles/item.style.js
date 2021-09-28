@@ -65,7 +65,7 @@ export const ItemDate = styled.p`
   letter-spacing: -0.43px;
 `;
 
-export const ItemLike = styled.div`
+export const ItemLove = styled.div`
   overflow: hidden;
   width: 90px;
   min-width: 90px;
@@ -81,6 +81,6 @@ export const Img = styled.img`
   object-fit: cover;
 `;
 
-export const LikePlus = styled.div``;
+export const LovePlus = styled.div``;
 
-export const LikeMinus = styled.div``;
+export const LoveMinus = styled.div``;

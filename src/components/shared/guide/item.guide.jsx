@@ -11,11 +11,11 @@ const ItemGuide = memo(() => {
           <I.ItemDate>2021.09.28 - 2021.09.28</I.ItemDate>
         </I.ItemLeft>
         <I.ItemRight>
-          <I.ItemLike>
+          <I.ItemLove>
             <I.Img></I.Img>
-          </I.ItemLike>
-          <I.LikePlus>+</I.LikePlus>
-          <I.LikeMinus>-</I.LikeMinus>
+          </I.ItemLove>
+          <I.LovePlus>+</I.LovePlus>
+          <I.LoveMinus>-</I.LoveMinus>
         </I.ItemRight>
       </I.ItemWrap>
     </>
