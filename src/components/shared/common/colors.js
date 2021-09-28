@@ -7,3 +7,11 @@ export const RED = css`
 export const PINK = css`
   ${`#E02040`}
 `;
+
+export const WHITE = css`
+  ${`#fff`}
+`;
+
+export const BLACK = css`
+  ${`#252525`}
+`;
