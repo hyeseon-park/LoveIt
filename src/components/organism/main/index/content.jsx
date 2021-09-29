@@ -9,7 +9,7 @@ const ListContent = styled.div`
   background-color: ${WHITE};
 `;
 
-const Content = memo(() => {
+const Content = memo(({ items }) => {
   const history = useHistory();
   const goToDetail = (seq) => {
     history.push({
@@ -20,56 +20,26 @@ const Content = memo(() => {
 
   return (
     <ListContent>
-      <I.ItemWrap onClick={goToDetail(1)}>
-        <I.ItemLeft>
-          <I.ItemTitle>타이틀 타이틀</I.ItemTitle>
-          <I.ItemDate>2021.09.28 - 2021.09.28</I.ItemDate>
-          <I.ItemDesc>설명 설명 설명 설명 설명 설명</I.ItemDesc>
-        </I.ItemLeft>
-        <I.ItemRight>
-          <I.ItemLove>
-            <I.Img></I.Img>
-          </I.ItemLove>
-          <I.LoveControl>
-            <I.LovePlus>+</I.LovePlus>
-            <I.LoveMinus>-</I.LoveMinus>
-          </I.LoveControl>
-        </I.ItemRight>
-      </I.ItemWrap>
-
-      <I.ItemWrap onClick={goToDetail(1)}>
-        <I.ItemLeft>
-          <I.ItemTitle>타이틀 타이틀</I.ItemTitle>
-          <I.ItemDate>2021.09.28 - 2021.09.28</I.ItemDate>
-          <I.ItemDesc>설명 설명 설명 설명 설명 설명</I.ItemDesc>
-        </I.ItemLeft>
-        <I.ItemRight>
-          <I.ItemLove>
-            <I.Img></I.Img>
-          </I.ItemLove>
-          <I.LoveControl>
-            <I.LovePlus>+</I.LovePlus>
-            <I.LoveMinus>-</I.LoveMinus>
-          </I.LoveControl>
-        </I.ItemRight>
-      </I.ItemWrap>
-
-      <I.ItemWrap onClick={goToDetail(1)}>
-        <I.ItemLeft>
-          <I.ItemTitle>타이틀 타이틀</I.ItemTitle>
-          <I.ItemDate>2021.09.28 - 2021.09.28</I.ItemDate>
-          <I.ItemDesc>설명 설명 설명 설명 설명 설명</I.ItemDesc>
-        </I.ItemLeft>
-        <I.ItemRight>
-          <I.ItemLove>
-            <I.Img></I.Img>
-          </I.ItemLove>
-          <I.LoveControl>
-            <I.LovePlus>+</I.LovePlus>
-            <I.LoveMinus>-</I.LoveMinus>
-          </I.LoveControl>
-        </I.ItemRight>
-      </I.ItemWrap>
+      {items.map((item) => (
+        <I.ItemWrap onClick={() => goToDetail(item.id)}>
+          <I.ItemLeft>
+            <I.ItemTitle>{item.title}</I.ItemTitle>
+            <I.ItemDate>
+              {item.startDate} - {item.endDate}
+            </I.ItemDate>
+            <I.ItemDesc>{item.describe}</I.ItemDesc>
+          </I.ItemLeft>
+          <I.ItemRight>
+            <I.ItemLove>
+              <I.Img></I.Img>
+            </I.ItemLove>
+            <I.LoveControl>
+              <I.LovePlus>+</I.LovePlus>
+              <I.LoveMinus>-</I.LoveMinus>
+            </I.LoveControl>
+          </I.ItemRight>
+        </I.ItemWrap>
+      ))}
     </ListContent>
   );
 });
