@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
+import { dateFormat } from "../../../../utils/dateFormat";
 import { WHITE } from "../../../shared/common/colors";
 import * as I from "../../../shared/styles/item.style";
 
@@ -25,7 +26,7 @@ const Content = memo(({ items }) => {
           <I.ItemLeft>
             <I.ItemTitle>{item.title}</I.ItemTitle>
             <I.ItemDate>
-              {item.startDate} - {item.endDate}
+              {dateFormat(item.startDate)} - {dateFormat(item.endDate)}
             </I.ItemDate>
             <I.ItemDesc>{item.describe}</I.ItemDesc>
           </I.ItemLeft>
