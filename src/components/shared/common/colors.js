@@ -9,9 +9,17 @@ export const PINK = css`
 `;
 
 export const WHITE = css`
-  ${`#fff`}
+  ${`#FFF`}
 `;
 
 export const BLACK = css`
   ${`#252525`}
+`;
+
+export const GREY = css`
+  ${`#ACB5BD`}
+`;
+
+export const BEIGE = css`
+  ${`#F2F2F2`}
 `;

@@ -3,8 +3,12 @@ import * as C from "../common/colors";
 import * as F from "../common/fontSize";
 
 export const ItemWrap = styled.div`
-  padding: 12px 0;
   display: flex;
+  width: 100%;
+  padding: 16px 16px;
+  border-bottom: 1px solid ${C.BEIGE};
+  align-items: center;
+
   @media (max-width: 360px) {
     flex-direction: column;
   }
@@ -12,17 +16,17 @@ export const ItemWrap = styled.div`
 
 export const ItemLeft = styled.div`
   flex-basis: 70%;
-  background-color: ${C.PINK};
 `;
 
 export const ItemRight = styled.div`
-  flex-basis: 30%;
-  background-color: ${C.RED};
   display: flex;
+  flex-basis: 30%;
+  justify-content: end;
 `;
 
 export const ItemTitle = styled.p`
   font-size: ${F.LARGE};
+  font-weight: 800;
   color: ${C.BLACK};
   line-height: 20px;
   text-overflow: ellipsis;
@@ -31,14 +35,17 @@ export const ItemTitle = styled.p`
 
 export const ItemDate = styled.p`
   font-size: ${F.SMALL};
-  color: ${C.BLACK};
+  font-weight: 600;
+  color: ${C.GREY};
   line-height: 20px;
   text-overflow: ellipsis;
   word-break: break-all;
+  padding: 5px 0;
 `;
 
 export const ItemDesc = styled.p`
   font-size: ${F.MEDIUM};
+  font-weight: 400;
   color: ${C.BLACK};
   line-height: 20px;
   text-overflow: ellipsis;
@@ -51,7 +58,7 @@ export const ItemLove = styled.div`
   min-width: 90px;
   height: 90px;
   min-height: 90px;
-  border: 1px solid #f1f3f5;
+  border: 1px solid ${C.BEIGE};
   border-radius: 4px;
 `;
 
@@ -61,8 +68,27 @@ export const Img = styled.img`
   object-fit: cover;
 `;
 
-export const LoveControl = styled.div``;
+export const LoveControl = styled.div`
+  padding: 0 0 0 16px;
+`;
 
-export const LovePlus = styled.div``;
+export const LovePlus = styled.button`
+  text-align: center;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  border-radius: 24px;
+  background-color: ${C.PINK};
+  margin-bottom: 5px;
+`;
 
-export const LoveMinus = styled.div``;
+export const LoveMinus = styled.button`
+  text-align: center;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  border-radius: 24px;
+  background-color: ${C.PINK};
+`;

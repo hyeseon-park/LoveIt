@@ -5,9 +5,17 @@ export const SMALL = css`
 `;
 
 export const MEDIUM = css`
-  ${`15px`}
+  ${`16px`}
 `;
 
 export const LARGE = css`
-  ${`17px`}
+  ${`19px`}
+`;
+
+export const XLARGE = css`
+  ${`22px`}
+`;
+
+export const XXLARGE = css`
+  ${`25px`}
 `;
