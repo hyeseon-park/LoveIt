@@ -1,14 +1,16 @@
 import React, { memo } from "react";
 import styled from "styled-components";
-import { RED } from "../../../shared/common/colors";
 
 const Top = styled.div`
   width: 100%;
-  background-color: ${RED};
 `;
 
 const Header = memo(() => {
-  return <Top>Form Header</Top>;
+  return (
+    <Top>
+      <div>뒤로</div>
+    </Top>
+  );
 });
 
 export default Header;
