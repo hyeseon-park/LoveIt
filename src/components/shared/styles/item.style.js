@@ -4,65 +4,45 @@ import * as F from "../common/fontSize";
 
 export const ItemWrap = styled.div`
   padding: 12px 0;
+  display: flex;
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
 `;
 
 export const ItemLeft = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
+  flex-basis: 70%;
   background-color: ${C.PINK};
-  &.center {
-    align-items: center;
-  }
 `;
 
 export const ItemRight = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
+  flex-basis: 30%;
   background-color: ${C.RED};
-  &.center {
-    align-items: center;
-  }
+  display: flex;
 `;
 
 export const ItemTitle = styled.p`
-  display: -webkit-box;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  margin-bottom: 6px;
   font-size: ${F.LARGE};
   color: ${C.BLACK};
   line-height: 20px;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  word-break: break-all;
+`;
+
+export const ItemDate = styled.p`
+  font-size: ${F.SMALL};
+  color: ${C.BLACK};
+  line-height: 20px;
+  text-overflow: ellipsis;
   word-break: break-all;
 `;
 
 export const ItemDesc = styled.p`
-  position: absolute;
-  left: 0;
-  bottom: 7px;
   font-size: ${F.MEDIUM};
   color: ${C.BLACK};
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: -0.43px;
-`;
-
-export const ItemDate = styled.p`
-  position: absolute;
-  left: 0;
-  bottom: 7px;
-  font-size: ${F.MEDIUM};
-  color: ${C.BLACK};
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: -0.43px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  word-break: break-all;
 `;
 
 export const ItemLove = styled.div`
@@ -80,6 +60,8 @@ export const Img = styled.img`
   height: 100%;
   object-fit: cover;
 `;
+
+export const LoveControl = styled.div``;
 
 export const LovePlus = styled.div``;
 
