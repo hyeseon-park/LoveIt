@@ -1,5 +1,7 @@
 import React, { memo, useRef } from "react";
 import * as G from "../../../shared/styles/form.style";
+import { addItem } from "../../../../service/itemRepository";
+import { dateFormat } from "../../../../utils/dateFormat";
 
 const Content = memo(() => {
   const formRef = useRef();
@@ -12,11 +14,12 @@ const Content = memo(() => {
     const habit = {
       id: Date.now(),
       title: titleRef.current.value || "",
-      startDate: new Date() || "",
-      endDate: new Date() || "",
+      startDate: dateFormat(new Date()) || "",
+      endDate: dateFormat(new Date()) || "",
       describe: descRef.current.value || "",
     };
     formRef.current.reset();
+    addItem(habit);
   };
 
   return (
@@ -28,7 +31,7 @@ const Content = memo(() => {
         </G.FormThemeDesc>
       </G.FormTop>
       <G.FormMiddle>
-        <form ref={titleRef}>
+        <form ref={formRef}>
           <G.FormTitle
             ref={titleRef}
             type="text"
@@ -49,7 +52,7 @@ const Content = memo(() => {
           />
         </form>
       </G.FormMiddle>
-      <G.FormButton onClick={() => handleSubmit}>추가하기</G.FormButton>
+      <G.FormButton onClick={handleSubmit}>추가하기</G.FormButton>
     </G.FormWrap>
   );
 });
