@@ -31,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
     min-width: 320px;
     height: auto;
     margin: 0 auto;
-    padding: 0 16px;
   }
   `;
 
