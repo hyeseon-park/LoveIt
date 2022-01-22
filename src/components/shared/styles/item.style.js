@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as C from "../common/colors";
 import * as F from "../common/fontSize";
+import { motion } from "framer-motion";
 
 export const ItemWrap = styled.div`
   display: flex;
@@ -52,20 +53,17 @@ export const ItemDesc = styled.p`
   word-break: break-all;
 `;
 
-export const ItemLove = styled.div`
-  overflow: hidden;
+export const ItemLove = styled(motion.div)`
   width: 90px;
   min-width: 90px;
   height: 90px;
   min-height: 90px;
-  border: 1px solid ${C.BEIGE};
-  border-radius: 4px;
 `;
+
 
 export const Img = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
 `;
 
 export const LoveControl = styled.div`
