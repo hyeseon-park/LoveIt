@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import firebaseApp from "../../service/firebase";
-// import { getItems } from "../../service/itemRepository";
+import { getItems } from "../../service/itemRepository";
 import IndexTemplate from "../../templates/main";
 
 const Index = () => {
   const [items, setItems] = useState([]);
+
+  getItems();
 
   useEffect(() => {
     let today = new Date();
@@ -36,7 +37,7 @@ const Index = () => {
     ];
     setItems(itemList);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [firebaseApp]);
+  }, []);
 
   return (
     <>
