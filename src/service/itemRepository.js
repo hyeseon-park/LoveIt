@@ -5,9 +5,9 @@ export const addItem = (item) => {
   set(ref(db, `items/${item.id}`), item);
 };
 
-export const getItems = () => {
+export const getItems = async () => {
   const dbRef = ref(getDatabase());
-  get(child(dbRef, `items`))
+  await get(child(dbRef, `items`))
     .then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
