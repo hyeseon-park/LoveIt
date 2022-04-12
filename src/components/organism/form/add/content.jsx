@@ -1,6 +1,5 @@
 import React, { memo, useRef } from "react";
 import * as G from "../../../shared/styles/form.style";
-import { addItem } from "../../../../service/itemRepository";
 import { dateFormat } from "../../../../utils/dateFormat";
 
 const Content = memo(() => {
@@ -19,7 +18,7 @@ const Content = memo(() => {
       describe: descRef.current.value || "",
     };
     formRef.current.reset();
-    addItem(habit);
+    // addItem(habit);
   };
 
   return (

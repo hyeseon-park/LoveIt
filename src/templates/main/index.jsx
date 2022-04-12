@@ -10,12 +10,12 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-const IndexTemplate = memo(({ items }) => {
+const IndexTemplate = memo(({ items, setItems }) => {
   return (
     <>
       <Container>
         <Header />
-        <Content items={items} />
+        <Content items={items} setItems={setItems} />
       </Container>
     </>
   );

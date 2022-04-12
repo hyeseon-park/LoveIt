@@ -1,20 +1,11 @@
 import { getDatabase, ref, set, child, get } from "firebase/database";
+import { database } from "./firebase";
 
-export const addItem = (item) => {
-  const db = getDatabase();
-  set(ref(db, `items/${item.id}`), item);
-};
-
-export const getItems = async () => {
-  const dbRef = ref(getDatabase());
-  await get(child(dbRef, `items`))
+export const getItems = () => {
+  const dbRef = ref(database);
+  get(child(dbRef, `items`))
     .then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-        return snapshot.val();
-      } else {
-        return "No data available";
-      }
+      console.log(snapshot);
     })
     .catch((error) => {
       console.error(error);
